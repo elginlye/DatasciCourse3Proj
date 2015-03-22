@@ -32,4 +32,6 @@ tidy_data <- group_by(subject_activity_mean_std_data, subject, activity)    # so
 library("reshape2")
 tidy_melt <- melt(tidy_data, id=c("subject","activity"), measure.vars= names(tidy_data)[3:81])  # reshape data with subject + activity as key columns, and rest of the 79 columns as variables 
 result <- dcast(tidy_melt, subject + activity ~ variable, mean) #reshape the molten data frame into 1 row per subject, per activity, with average/mean of the 79 feature measurements in the same row  
+
+# Step 6, output the tidy data to a text file
 write.table(result, "Subject_Activity.txt", row.name=FALSE)
