@@ -10,12 +10,12 @@ output: html_document
 1. Measures  the body motion of 30 volunteers performing 6 activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
 2. Each volunteer wears a smartphone on the waist. The  accelerometer and gyroscope embedded in the smartphone records the 3-axial linear acceleration and 3-axial angular velocity of each activity.
 3. The obtained dataset has been randomly partitioned into two sets, 
-    +training set where 70% of the volunteers was selected for generating the training data
-    +test set for the other 30% of volunteers
+    + training set where 70% of the volunteers was selected for generating the training data
+    + test set for the other 30% of volunteers
     
 # The raw data 
 
-Saved into the following files,  for the train and test data. Their descriptions are equivalent. 
+Data in the train and test sets are saved into the following files,  
 
 * 'train/subject_train.txt',  
   'test/subject_test.txt': Each row identifies the subject who performed the activity. Its range is from 1 to 30. 
@@ -59,7 +59,7 @@ The raw data is to be unzipped in the working directory, with sub-directories *t
 3. Step 3, Add a new column for activity name in the data set.
 4. Step 4, Appropriately labels the data set with descriptive variable names.
 5. Step 5, From the data set in step 4, add another column for the subject in the data set.  Creates a second, independent tidy data set with the average of each variable for each activity and each subject. Final tidy data set contains 180 observations. Each observation has 79 measurements, activity & subject, totalling 81 variables. 
-6. Finally outputs the tidy data set to a text file.
+6. Finally output the tidy data set to a text file "Subject_Activity.txt""
 
 
 
