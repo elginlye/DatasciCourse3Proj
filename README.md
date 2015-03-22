@@ -68,11 +68,11 @@ The raw data is to be unzipped in the working directory, with sub-directories *t
 
 ##Variables in the tidy data set
 Final tidy data set contains 180 observations. 
-Each observation has an activity, a subject and 79 measurements, totalling 81 variables.
+Each observation has an activity, a subject and 79 measurements, totalling 81 variables.  
 Time domain signals are prefixed with "time-"  
 Freq domain signals are prefixed with "freq-"    
 Accelerometer signals measured in standard gravity units 'g'. The body acceleration signal obtained by subtracting the gravity from the total acceleration.   
-Gyroscope signals measures angular velocity vector units of radians/second. 
+Gyroscope signals measures angular velocity vector units of radians/second.   
 All measurements are normalized and bounded within [-1,1].  
 
 
