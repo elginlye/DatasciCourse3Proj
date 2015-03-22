@@ -28,7 +28,8 @@ names(activity_mean_std_data) <- str_replace(names(activity_mean_std_data), "Bod
 subject <- rbind(read.table("test/subject_test.txt"), read.table("train/subject_train.txt"))
 names(subject) <- c("subject")  # read in all the subjects
 subject_activity_mean_std_data <- cbind(subject, activity_mean_std_data)    # add new column containing the subjects to the measurements 
-tidy_data <- group_by(subject_activity_mean_std_data, subject, activity)    # sort the dataset by subject, by activity 
+tidy_data <- group_by(subject_activity_mean_std_data, subject, activity)    # sort the dataset by subject, by activity
+library("reshape2")
 tidy_melt <- melt(tidy_data, id=c("subject","activity"), measure.vars= names(tidy_data)[3:81])  # reshape data with subject + activity as key columns, and rest of the 79 columns as variables 
 result <- dcast(tidy_melt, subject + activity ~ variable, mean) #reshape the molten data frame into 1 row per subject, per activity, with average/mean of the 79 feature measurements in the same row  
 write.table(result, "Subject_Activity.txt", row.name=FALSE)
